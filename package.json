@@ -9,6 +9,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.14.0"
+    "bing.search": "^1.0.1",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.5"
   }
 }
