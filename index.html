@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <title>Image Search Abstraction Layer</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="header">Image Search Abstraction Layer</h1>
+            <blockquote> User Stories:
+                <ol>
+                    <li> I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+                    <li> I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
+                    <li> I can get a list of the most recently submitted search strings.</li>
+                </ol>
+            </blockquote>
+            <h3>Example Usage:</h3>
+                <code>https://lightbody-img-search-ma.herokuapp.com/imagesearch/tomato</code><br>
+                <code>https://lightbody-url-shortener-ms.herokuapp.com/latest/imagesearch</code>
+            <h3>Example Search Output:</h3>
+                <code>[{
+                "url":"http://mamaguru.com/wp-content/uploads/2010/05/5-May-and-tomato-0141.jpg",
+                "snippet":"Tomato Out of the Box « mamaguru",
+                "thumbnail":"http://ts4.mm.bing.net/th?id=OIP.M34d886f4d29c57227c7cf87ae95dd64aH0&pid=15.1",
+                "context":"http://mamaguru.com/tomato-out-of-the-box/"
+                }, {
+                "url":"http://upload.wikimedia.org/wikipedia/commons/8/88/Bright_red_tomato_and_cross_section02.jpg",
+                "snippet":"File:Bright red tomato and cross section02.jpg - Wikimedia Commons",
+                "thumbnail":"http://ts4.mm.bing.net/th?id=OIP.Me32fb83c71a16f731f37b9cd99950632H0&pid=15.1",
+                "context":"http://commons.wikimedia.org/wiki/File:Bright_red_tomato_and_cross_section02.jpg"
+                }, {
+                "url":"http://joshtom.files.wordpress.com/2010/07/tomato.jpg",
+                "snippet":"Tomatoes in abundance, dill to flavor the world! | Gay Spirit Diary",
+                "thumbnail":"http://ts2.mm.bing.net/th?id=OIP.Md59f3217d654d6995aefe125fa9e1d3aH0&pid=15.1",
+                "context":"http://joshtom.wordpress.com/2010/07/21/tomatoes-in-abundance-dill-to-flavor-the-world/"
+                }, {
+                "url":"http://4.bp.blogspot.com/-dW6v3AvwNVI/Th8cA_kHgxI/AAAAAAAABPc/2qWocFK18oQ/s1600/tomato.jpg",
+                "snippet":"The CC Palate: Tomato, Wine, and Feta Sauce",
+                "thumbnail":"http://ts1.mm.bing.net/th?id=OIP.M0694aec7a8dc9c3ecaf350cc43a2931fH0&pid=15.1",
+                "context":"http://ccpalate.blogspot.com/2011/07/margs-tomato-wine-and-feta-sauce.html"
+                }, {
+                "url":"http://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",
+                "snippet":"File:Tomato je.jpg - Wikimedia Commons",
+                "thumbnail":"http://ts1.mm.bing.net/th?id=OIP.M1e2c196fba58fcf6a8a11e7d45120706o0&pid=15.1",
+                "context":"http://commons.wikimedia.org/wiki/File:Tomato_je.jpg"
+                }, {
+                "url":"http://njlhealthandbeauty.files.wordpress.com/2011/06/tomato.jpg",
+                "snippet":"Tomato Coconut Gazpacho | NJL Health + Beauty","thumbnail":"http://ts1.mm.bing.net/th?id=OIP.Md014114f49a376f6f5830df47b9d74fcH0&pid=15.1",
+                "context":"http://njlhealthandbeauty.wordpress.com/2011/06/20/tomato-coconut-gazpacho/"
+                }, {
+                "url":"http://england.lovefoodhatewaste.com/sites/files/lfhw/image/Tomato.jpg",
+                "snippet":"Tomatoes","thumbnail":"http://ts1.mm.bing.net/th?id=OIP.M396da51d52b9c612ceb2daa38d8dc33eH0&pid=15.1",
+                "context":"http://england.lovefoodhatewaste.com/node/1756"
+                }, {
+                "url":"http://www.walltowallinc.com/wp-content/uploads/2012/09/shutterstock_55181581.jpg",
+                "snippet":"tomato | Wall to Wall Contracting, Inc.",
+                "thumbnail":"http://ts4.mm.bing.net/th?id=OIP.Ma17f584ee44beda9cef00d6217780fd1o0&pid=15.1",
+                "context":"http://www.walltowallinc.com/?p=186" 
+                }, {
+                "url":"http://yourmedguide.com/wp-content/uploads/2012/09/tomatoes.jpg",
+                "snippet":"Let's Talk About Tomatoes - Be Healthy, Be Happy",
+                "thumbnail":"http://ts2.mm.bing.net/th?id=OIP.Ma39098b25f1e34385105373c3fb50c1cH0&pid=15.1",
+                "context":"http://yourmedguide.com/2012/09/lets-talk-about-tomatoes.html"
+                }, {
+                "url":"http://acceleratingscience.com/wp-content/uploads/2014/11/tomato.jpg",
+                "snippet":"Secondary Metabolites in Organic and Non-Organic Tomatoes",
+                "thumbnail":"http://ts3.mm.bing.net/th?id=OIP.M0438a16591f9daaa0c657491f8f08b05o0&pid=15.1",
+                "context":"http://acceleratingscience.com/food/secondary-metabolites-in-organic-and-non-organic-tomatoes/"
+                }]</code>
+            <h3>Example Latest Output:</h3>
+                <code>[{
+                "term":"tomato",
+                "when":"8/8/2016, 4:14:04 PM"
+                }, {
+                "term":"panda",
+                "when":"8/8/2016, 4:13:58 PM"
+                }, {
+                "term":"panda",
+                "when":"8/8/2016, 4:13:58 PM"
+                }]</code>
+        </div>
+    </body>
+</html>
